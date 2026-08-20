@@ -4,22 +4,12 @@ vim.opt.termguicolors = true
 -- Adding Leader key
 vim.g.mapleader = " "
 
---Setting up clipboard provider to wl-clipboard or other providers.
-vim.g.clipboard = {
-  name = "wl-clipboard",
-  copy = {
-    ["+"] = "wl-copy",
-    ["*"] = "wl-copy",
-  },
-  paste = {
-    ["+"] = "wl-paste",
-    ["*"] = "wl-paste",
-  },
-  cache_enabled = 0,
-}
 
 -- Enable clipboard support
--- vim.cmd([[set clipboard+=unnamedplus]])
+vim.opt.clipboard = "unnamedplus"
+
+--Setting up clipboard provider to wl-clipboard or other providers.
+--Removed the wl-copy , will add a ladder.
 
 -- Normal mode mappings
 vim.api.nvim_set_keymap("n", "y", '"+y', { noremap = true })
