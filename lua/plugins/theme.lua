@@ -1,6 +1,4 @@
 -- Transparency TOGGLE:
--- Set to true to make ALL installed & built-in themes 100% transparent
--- Set to false to give ALL themes their default solid backgrounds
 local transparent = true
 
 -- Persistent Theme Helper Functions
@@ -28,7 +26,7 @@ local function save_theme(theme_name)
   end
 end
 
--- Automatically save active theme whenever colorscheme changes
+-- to automatically save active theme whenever colorscheme changes
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
@@ -39,7 +37,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 return {
-  -- 0. Universal Transparency Plugin (Handles all themes + indent-blankline cleanly)
+  -- 0. Universal Transparency Plugin (Handles all themes + indent-blankline)
   {
     "xiyaowong/transparent.nvim",
     lazy = false,
@@ -64,7 +62,7 @@ return {
     end,
   },
 
-  -- 1. Gruvbox Material & Saved Theme Restorer
+  -- 1. Gruvbox Material
   {
     "sainnhe/gruvbox-material",
     lazy = false,
@@ -95,7 +93,7 @@ return {
     },
   },
 
-  -- 3. Tokyonight (Vibrant Blue/Purple theme with rich italics)
+  -- 3. Tokyonight 
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -111,7 +109,7 @@ return {
     },
   },
 
-  -- 4. Catppuccin (Smooth Pastel theme with full italics support)
+  -- 4. Catppuccin 
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -130,7 +128,7 @@ return {
     },
   },
 
-  -- 5. Rose Pine (Warm, elegant aesthetic with gold, pine, and iris accents)
+  -- 5. Rose Pine
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -145,7 +143,7 @@ return {
     },
   },
 
-  -- 6. Kanagawa (Japanese art inspired warm dark theme)
+  -- 6. Kanagawa
   {
     "rebelot/kanagawa.nvim",
     lazy = false,
